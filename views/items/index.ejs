@@ -1,0 +1,15 @@
+<h1> Item List</h1>
+<ul>
+  <% item.forEach((item) => { %>
+    <li>
+      <%= item.itemName %>
+      <a href="/item/<%= item._id %>">View Details</a>
+       <a href="/item/<%= item._id %>/edit/">Edit Item</a>
+       <form action="/item/<%= item._id%>/delete" method="POST">
+  <button type="submit">Delete Item</button>
+</form>
+</li>
+  <%  }) %>
+</ul>
+
+<button onclick="window.location='/my-profile';">Profile</button>

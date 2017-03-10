@@ -1,0 +1,50 @@
+<p>Welcome to <%= title %></p>
+
+<% if (successMessage.length > 0) {%>
+  <p class="success"> <%=successMessage %></p>
+
+<% } %>
+
+  <p> Welcome, <%=user.firstName %></p><br>
+  <p> Your Home's Name is <%=user.homeName %></p>
+
+<% if ((typeof user.home) === 'undefined') { %>
+    <p> Click below if you like to add your home details</p>
+    <button onclick="window.location='/home/new';">Home Details</button>
+    <br>
+    <p> Click below if you like to add new items</p>
+    <button onclick="window.location='/items/new';">Add New Item</button>
+
+  <%} else {%>
+    <ul>
+    <li>Insurance Company</li>
+    <li><%=user.home.insuranceCompany%></li>
+    <li>Insurance Company Phone</li>
+    <li><%=user.home.insurancePhone%></li>
+    <li>Agent Name</li>
+    <li><%=user.home.agentName%></li>
+    <li>Insurance Policy</li>
+    <li><%=user.home.insurancePolicy%></li>
+    <li>Home Picture</li>
+    <li><%=user.home.homePicture%></li>
+  </ul>
+      <p> Click below if you like to update your home details.</p>
+      <button onclick="window.location='/home/new';">Home Details</button>
+      <br>
+      <p> Click below if you like to add new items</p>
+      <button onclick="window.location='/items/new';">Add New Item</button>
+      <br>
+      <p> Click below if you like to view items</p>
+      <button onclick="window.location='/my-item';">View Items</button>
+
+<%}%>
+
+<ul>
+  <% if (user) { %>
+<button onclick="window.location='/logout';">Logout</button>
+
+  <%}else {%>
+<li> <a href="/signup"> Sign Up </a></li>
+<li> <a href="/login"> Log In </a></li>
+</ul>
+<%}%>

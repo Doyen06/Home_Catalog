@@ -1,0 +1,40 @@
+<h2>Signup</h2>
+
+<form action="/signup" method="POST" id="form-container">
+  <label for="firstName">First Name</label>
+  <input id="firstName" type="text" name="firstName" placeholder="Martin">
+  <br><br>
+
+  <label for="lastName">Last Name</label>
+  <input id="lastName" type="text" name="lastName" placeholder="Lawrence">
+  <br><br>
+
+
+  <label for="email">Email</label>
+  <input id="email" type="text" name="email" placeholder="IloveGina@gmail.com">
+  <br><br>
+
+  <label for="homeName">Home Name</label>
+  <input id="homeName" type="text" name="homeName" placeholder="My Home">
+  <br><br>
+
+  <label for="primaryAddress">Address</label>
+  <input id="primaryAddress" type="text" name="primaryAddress" placeholder="411 E State Street Ithica, NY 14850">
+  <br><br>
+
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="Your password">
+
+  <% if (typeof message !== "undefined") { %>
+    <div class="error-message"><%= message %></div>
+  <% } %>
+  <br><br>
+
+  <button>Create account</button>
+
+  <p class="account-message">
+    Do you already have an account?
+    <a href="/login">Login</a>
+  </p>
+</form>
+<!-- <a href="/auth/facebook"> Login with Facebook</a> -->

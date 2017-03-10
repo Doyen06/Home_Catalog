@@ -1,0 +1,19 @@
+<h1>Log In </h1>
+
+<% if (errorMessage.length > 0) { %>
+  <p class="error"> <%= errorMessage %> </p>
+<% } %>
+
+<form action="/login" method="POST">
+  <div>
+    <label for="email">Email:</label>
+    <input type="text" name="email">
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" name="password">
+  </div>
+  <div>
+    <input type="submit" value="Log In">
+  </div>
+</form>

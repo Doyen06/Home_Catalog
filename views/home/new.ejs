@@ -1,0 +1,49 @@
+ <!--1)if statement when customer logs in to see if this information is filled out first,
+renders the form, if not, displays the get info 2) Link to add more than one photo when
+requested-->
+<h1> Home Information</h1>
+
+
+<% if (message.length > 0) { %>
+  <p class="success"> <%= message %> </p>
+<% } %>
+<% if ((typeof user.home) != 'undefined') { %>
+  <li>Insurance Company: <%=user.home.insuranceCompany%></li>
+  <li>Insurance Company Phone: <%=user.home.insurancePhone%></li>
+  <li>Agent Name: <%=user.home.agentName%></li>
+  <li>Insurance Policy: <%=user.home.insurancePolicy%></li>
+  <li>Home Picture: <%=user.home.homePicture%></li>
+
+  <%}%>
+<br>
+<form action="/home" method="post" enctype="multipart/form-data">
+  <div>
+    <label for="insrName">Insurance Comany Name </label>
+    <input id="insrName" type="text" name="insuranceCompany">
+  </div>
+
+  <div>
+    <label for="insrPhone">Insurance Company Phone # </label>
+    <input id="insrPhone" type="text" name="insurancePhone">
+  </div>
+
+  <div>
+    <label for="insrAgent"> Insurance Agent </label>
+    <input id="insrAgent" type="text" name="agentName">
+  </div>
+
+  <div>
+    <label for="insrPolicy"> Policy </label>
+    <input id="insrPolicy" type="text" name="insurancePolicy">
+  </div>
+  <div>
+    <label for="homePicture"> Home Photo </label>
+    <input id="picture-input" type="file" name="homePicture">
+  </div>
+
+
+  <button> Add/Update Home Info </button>
+</form>
+
+<p> Click to go to back to Profile</p>
+<button onclick="window.location='/my-profile';">Profile</button>
