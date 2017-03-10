@@ -21,7 +21,7 @@
     <div>Insurance Company Phone: <%=user.home.insurancePhone%></div>
     <div>Agent Name: <%=user.home.agentName%></div>
     <div>Insurance Policy: <%=user.home.insurancePolicy%></div>
-    <div>Home Picture : <%=user.home.homePicture%></div>
+    <div>Home Picture :<img src= "<%= user.home.homePicture %>"></div>
 
       <p> Click below if you like to update your home details.</p>
       <button onclick="window.location='/home/new';">Home Details</button>
