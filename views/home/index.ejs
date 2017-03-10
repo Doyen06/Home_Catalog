@@ -1,8 +1,7 @@
-<ul>
+
   <% home.forEach((home) => { %>
-    <li>
-      <%= home.name %> 
+    <div>
+      <%= home.name %>
       <a href="/home/<%= home._id %>">View Details</a>
-    </li>
+    </div>
   <%  }) %>
-</ul>

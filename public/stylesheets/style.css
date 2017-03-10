@@ -1,8 +1,63 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(http://www.bringfull.com/wp-content/uploads/2015/11/interior-decorator-san-diego-1024x682.jpg);
 }
 
 a {
   color: #00B7FF;
+}
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+  border-radius: 25px;
+  padding: 5%;
+}
+
+div.transbox  h1{
+  margin-left: 15%;
+  font-weight: bold;
+  color: #000000;
+}
+div.transbox  h2{
+  margin-left: 15%;
+  font-weight: bold;
+  color: #000000;
+}
+div.transbox  h3{
+  margin-left: 15%;
+  font-weight: bold;
+  color: #000000;
+}
+
+div.transbox  p{
+  margin-left: 15%;
+  font-weight: bold;
+  color: #000000;
+}
+
+div.transbox  h1{
+  margin-left: 15%;
+  font-weight: bold;
+  color: #000000;
+}
+
+div.transbox  div{
+  margin-left: 15%;
+  font-weight: bold;
+  color: #000000;
+}
+
+div.transbox  button{
+  margin-left: 15%;
+  font-weight: bold;
+  color: #000000;
+}
+
+div.transbox  form{
+  margin-left: 15%;
+  font-weight: bold;
+  color: #000000;
 }

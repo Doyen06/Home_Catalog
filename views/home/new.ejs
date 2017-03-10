@@ -8,11 +8,12 @@ requested-->
   <p class="success"> <%= message %> </p>
 <% } %>
 <% if ((typeof user.home) != 'undefined') { %>
-  <li>Insurance Company: <%=user.home.insuranceCompany%></li>
-  <li>Insurance Company Phone: <%=user.home.insurancePhone%></li>
-  <li>Agent Name: <%=user.home.agentName%></li>
-  <li>Insurance Policy: <%=user.home.insurancePolicy%></li>
-  <li>Home Picture: <%=user.home.homePicture%></li>
+  <div class="home-info"
+  <span>Insurance Company: <%=user.home.insuranceCompany%></span>
+  <span>Insurance Company Phone: <%=user.home.insurancePhone%></span>
+  <span>Agent Name: <%=user.home.agentName%></span>
+  <span>Insurance Policy: <%=user.home.insurancePolicy%></span>
+  <span>Home Picture: <%=user.home.homePicture%></span>
 
   <%}%>
 <br>

@@ -16,18 +16,13 @@
     <button onclick="window.location='/items/new';">Add New Item</button>
 
   <%} else {%>
-    <ul>
-    <li>Insurance Company</li>
-    <li><%=user.home.insuranceCompany%></li>
-    <li>Insurance Company Phone</li>
-    <li><%=user.home.insurancePhone%></li>
-    <li>Agent Name</li>
-    <li><%=user.home.agentName%></li>
-    <li>Insurance Policy</li>
-    <li><%=user.home.insurancePolicy%></li>
-    <li>Home Picture</li>
-    <li><%=user.home.homePicture%></li>
-  </ul>
+
+    <div>Insurance Company: <%=user.home.insuranceCompany%></div>
+    <div>Insurance Company Phone: <%=user.home.insurancePhone%></div>
+    <div>Agent Name: <%=user.home.agentName%></div>
+    <div>Insurance Policy: <%=user.home.insurancePolicy%></div>
+    <div>Home Picture : <%=user.home.homePicture%></div>
+
       <p> Click below if you like to update your home details.</p>
       <button onclick="window.location='/home/new';">Home Details</button>
       <br>
